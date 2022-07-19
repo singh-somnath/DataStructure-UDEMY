@@ -94,7 +94,7 @@ namespace DataStructureAndAlgorithm
         public static void Main(string[] args)
         {
             //Program objProgram = new Program();
-            
+
             // Console.WriteLine("Hello Earth!");
             // objProgram.findNemo(objProgram.nameList);
             // objProgram.findNemo2(Program.nemo2);
@@ -106,10 +106,21 @@ namespace DataStructureAndAlgorithm
             // pairExist = objProgram.hasNumberWithPairForUnsortedList(new int[]{-1,1,2,6,5,5,8,9,7,3,4},10);
             // Console.WriteLine("Pair Exist : "+pairExist);
 
-            Array newArray = new Array();
-            Console.WriteLine(newArray.length);
-            int i = newArray.push("hi");
-            
+            Array objArray = new Array();
+            objArray.push(23);
+            objArray.push("Hi");
+            objArray.push("Hello");
+            objArray.push("Bye");
+            Console.WriteLine("Length - " + objArray.length);
+            Console.WriteLine("Removed Item - " + objArray.pop());
+            Console.WriteLine("Removed Item - " + objArray.pop());
+            Console.WriteLine("Removed Item - " + objArray.pop());
+            Console.WriteLine("Removed Item - " + objArray.pop());
+            Console.WriteLine("Removed Item - " + objArray.pop());
+            Console.WriteLine("Length - "+ objArray.length);
+       
+
+
         }
     }
 }
