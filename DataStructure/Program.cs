@@ -128,8 +128,9 @@ namespace DataStructure
             ReverseString objReverseString = new ReverseString("Hi My Name is Somnath Singh");
             Console.WriteLine("Reverse String : " + objReverseString.reverseString());
 
+            MergeSortedArrays objMergedSortedArray = new MergeSortedArrays(new int[] { 0, 2, 3, 4, 31 }, new int[] { -2, 4, 6, 30 });
 
-
+            Console.WriteLine("Single Sorted List : " + objMergedSortedArray.getSingleSortedList());
         }
     }
 }
