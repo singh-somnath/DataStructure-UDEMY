@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-
-namespace DataStructureAndAlgorithm
+using DataStructure.ArrayImplementation;
+namespace DataStructure
 {
     class Program
     {
+         
         public readonly string[] nemo = {"nemo","Demo"};
         public string[] nameList = new string[10000];
 
@@ -106,19 +107,27 @@ namespace DataStructureAndAlgorithm
             // pairExist = objProgram.hasNumberWithPairForUnsortedList(new int[]{-1,1,2,6,5,5,8,9,7,3,4},10);
             // Console.WriteLine("Pair Exist : "+pairExist);
 
-            Array objArray = new Array();
+            DynamicArray objArray = new DynamicArray();
             objArray.push(23);
             objArray.push("Hi");
             objArray.push("Hello");
             objArray.push("Bye");
+            objArray.push("Love");
+            objArray.push("India");
             Console.WriteLine("Length - " + objArray.length);
-            Console.WriteLine("Removed Item - " + objArray.pop());
-            Console.WriteLine("Removed Item - " + objArray.pop());
-            Console.WriteLine("Removed Item - " + objArray.pop());
-            Console.WriteLine("Removed Item - " + objArray.pop());
-            Console.WriteLine("Removed Item - " + objArray.pop());
+            Console.WriteLine("Popped Item - " + objArray.pop());
+            Console.WriteLine("Popped Item - " + objArray.pop());
             Console.WriteLine("Length - "+ objArray.length);
-       
+            Console.WriteLine("delete Item - " + objArray.delete(2));
+            Console.WriteLine("delete Item - " + objArray.delete(0));
+            Console.WriteLine("Popped Item - " + objArray.pop());
+            Console.WriteLine("delete Item - " + objArray.delete(0));
+            Console.WriteLine("Length - " + objArray.length);
+            Console.WriteLine("Array - " + objArray.toString());
+
+            ReverseString objReverseString = new ReverseString("Hi My Name is Somnath Singh");
+            Console.WriteLine("Reverse String : " + objReverseString.reverseString());
+
 
 
         }

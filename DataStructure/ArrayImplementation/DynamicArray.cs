@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 
-namespace DataStructureAndAlgorithm
+namespace DataStructure.ArrayImplementation
 {
-    class Array
+    class DynamicArray
     {
         public int length;
         private Object[] data;
 
-        public Array()
+        public DynamicArray()
         {
               this.length=0;
               this.data = new object[] { };
@@ -47,7 +47,39 @@ namespace DataStructureAndAlgorithm
             return returnItem;
         }
 
-    
+        public Object delete(int index)
+        {
+            if (this.length <= 0)
+            {
+                return "Array is already empty";
+            }
+            else if (index > this.length - 1 || index < 0)
+            {
+                return "Index is not valid";
+            }
+            else
+            { 
+                    Object[] dataTemp = new object[this.length--];
+                    int j = 0;
+                    for (int i = 0; i < this.data.Length; i++)
+                        if(i != index)
+                            dataTemp[j++] = this.data[i];
+
+                    Object returnItem = this.data[index];
+                    this.data = dataTemp;
+                    return returnItem;
+            }
+        }
+
+        public string toString()
+        {
+            string returnItem = "";
+            for (int i = 0; i < this.length; i++)
+                returnItem += this.data[i] + ",";
+
+            return returnItem.Trim().Length > 0 ? returnItem.Remove(returnItem.LastIndexOf(",")) : "";
+        }
+
     }
 
 }
